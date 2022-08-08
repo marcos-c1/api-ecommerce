@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "es6"
+    ],
+    "allowJs": true,
+    "outDir": "build",
+    "rootDir": "backend",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+  },
+  "include": [
+    "backend/**/*"
+  ],
+  // NOVO: Opçoes para observação de arquivo/diretório
+  "watchOptions": {
+    // Usa os eventos nativos do file system para arquivos e diretórios
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    // Checka os arquivos buscando atualizações mais frequentemente
+    // quando eles são muito atualizados
+    "fallbackPolling": "dynamicPriority"
+  }
+}

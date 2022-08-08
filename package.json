@@ -1,0 +1,38 @@
+{
+  "name": "ea3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "compile": "npx tsc",
+    "test": "jest",
+    "server": "npx nodemon build/server.js",
+    "dev": "concurrently \"npx tsc\" && \"npx nodemon build/server.js\"",
+    "data:import": "node ./build/seederScript.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cryptr": "^6.0.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.6.3",
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19",
+    "ts-jest": "^28.0.7"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": ["ts", "tsx", "js"]
+  }
+}
